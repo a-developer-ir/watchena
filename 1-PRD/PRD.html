@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe - Watchena Landing Page & Auth</title>
+    <style>
+        /* Base Wireframe Styles */
+        :root {
+            --wire-bg: #f4f4f4;
+            --wire-border: #666;
+            --wire-text: #333;
+            --wire-box-bg: #fff;
+            --wire-btn: #444;
+            --wire-btn-text: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: var(--wire-bg);
+            color: var(--wire-text);
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Placeholders */
+        .image-placeholder {
+            background-color: #e0e0e0;
+            border: 2px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* =========================================
+           TOP ANNOUNCEMENT BANNER (NEW)
+           ========================================= */
+        .top-announcement-banner {
+            background-color: var(--wire-btn);
+            color: var(--wire-btn-text);
+            text-align: center;
+            padding: 8px 20px;
+            font-size: 14px;
+            position: relative;
+            font-weight: bold;
+        }
+
+        .top-announcement-banner .close-banner-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--wire-btn-text);
+            font-size: 18px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* Header */
+        header {
+            background: var(--wire-box-bg);
+            border-bottom: 2px solid var(--wire-border);
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-placeholder {
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid var(--wire-border);
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--wire-text);
+            font-weight: bold;
+        }
+
+        /* Standardized Search Box */
+        .search-box {
+            display: flex;
+            border: 2px solid var(--wire-border);
+            border-radius: 6px;
+            overflow: hidden;
+            background: var(--wire-box-bg);
+            flex: 1;
+            max-width: 400px;
+            margin: 0 20px;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 10px 15px;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            background: #ddd;
+            border: none;
+            border-right: 2px solid var(--wire-border);
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Header Actions (Notification, Auth, Cart) */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .notification-btn {
+            background: transparent;
+            border: 2px solid var(--wire-border);
+            padding: 6px 10px;
+            cursor: pointer;
+            position: relative;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--wire-border);
+            color: white;
+            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 50%;
+        }
+
+        .header-actions button:not(.notification-btn) {
+            background: transparent;
+            border: 2px solid var(--wire-border);
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            background: var(--wire-btn) !important;
+            color: var(--wire-btn-text) !important;
+        }
+
+        /* Hero Section & Slider */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 0;
+            border-bottom: 2px solid var(--wire-border);
+            background: var(--wire-box-bg);
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-buttons button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: 2px solid var(--wire-border);
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Slider Wireframe Elements */
+        .slider-container {
+            flex: 1;
+            position: relative;
+        }
+
+        .slider-visual {
+            height: 350px;
+            width: 100%;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            border: 2px solid var(--wire-border);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .slider-arrow.right {
+            right: -20px;
+        }
+
+        .slider-arrow.left {
+            left: -20px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid var(--wire-border);
+            background: transparent;
+        }
+
+        .slider-dot.active {
+            background: var(--wire-border);
+        }
+
+        /* Common Section Styles */
+        .common-section {
+            padding: 60px 0;
+            border-bottom: 2px solid var(--wire-border);
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        /* Product Carousel / Grid */
+        .product-row {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+
+        .product-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            min-width: 240px;
+            background: var(--wire-box-bg);
+            border: 1px solid var(--wire-border);
+            padding: 15px;
+            position: relative;
+            border-radius: 8px;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .product-img {
+            height: 180px;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .price-section {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .new-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* Brands Section */
+        .brands-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .brand-item {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+
+        /* Value Proposition */
+        .value-prop-section {
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--wire-box-bg);
+            border: 1px solid var(--wire-border);
+            padding: 30px 20px;
+            border-radius: 8px;
+        }
+
+        .icon-placeholder {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Lead Generation & Social Media Section */
+        .lead-gen-section {
+            background: var(--wire-box-bg);
+        }
+
+        .lead-social-wrapper {
+            display: flex;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .lead-form-box {
+            flex: 2;
+            border: 2px solid var(--wire-border);
+            padding: 40px;
+            background: #fafafa;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .lead-form-box p {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .form-group input {
+            padding: 12px;
+            flex: 1;
+            border: 1px solid var(--wire-border);
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .social-box {
+            flex: 1;
+            border: 2px solid var(--wire-border);
+            padding: 40px;
+            background: #fafafa;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--wire-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            background: #eee;
+            cursor: pointer;
+        }
+
+        /* Floating Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--wire-btn);
+            color: var(--wire-btn-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid #fff;
+            z-index: 100;
+        }
+
+        .chat-widget:hover {
+            transform: scale(1.05);
+        }
+
+        /* Standard Footer */
+        footer {
+            background: #222;
+            color: #ddd;
+            padding: 60px 0 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-contact p {
+            margin-bottom: 10px;
+            color: #bbb;
+        }
+
+        .trust-seals {
+            display: flex;
+            gap: 15px;
+        }
+
+        .trust-seal {
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 8px;
+            color: #333;
+        }
+
+        .footer-bottom {
+            background: #111;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* =========================================
+           AUTH MODAL STYLES
+           ========================================= */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            /* پیش‌فرض مخفی است */
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            backdrop-filter: blur(3px);
+        }
+
+        .auth-modal {
+            background: var(--wire-box-bg);
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--wire-border);
+        }
+
+        .close-modal-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .auth-modal-title {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .auth-tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 25px;
+        }
+
+        .auth-tab {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            color: #777;
+        }
+
+        .auth-tab.active {
+            border-bottom: 3px solid var(--wire-border);
+            color: #000;
+        }
+
+        .auth-form-group {
+            margin-bottom: 15px;
+        }
+
+        .auth-form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--wire-border);
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .auth-submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--wire-btn);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .forgot-password-link {
+            display: block;
+            text-align: left;
+            font-size: 13px;
+            color: #555;
+            text-decoration: none;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .forgot-password-link:hover {
+            color: #000;
+        }
+
+        .auth-divider {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .auth-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            border-top: 1px solid #ccc;
+            z-index: 1;
+        }
+
+        .auth-divider span {
+            background: var(--wire-box-bg);
+            padding: 0 15px;
+            position: relative;
+            z-index: 2;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .google-login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #fff;
+            border: 2px solid var(--wire-border);
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .forgot-password-message {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .header-content {
+                gap: 15px;
+            }
+
+            .search-box {
+                order: 3;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 10px 0 0 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .slider-container {
+                width: 100%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .form-group {
+                flex-direction: column;
+            }
+
+            .lead-social-wrapper {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .trust-seals {
+                justify-content: center;
+            }
+
+            .auth-modal {
+                margin: 20px;
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         TOP ANNOUNCEMENT BANNER
+         ========================================= -->
+    <div class="top-announcement-banner" id="topAnnouncementBanner">
+        [بنر اطلاع‌رسانی: ارسال رایگان برای خریدهای بالای ۵ میلیون تومان - فقط تا پایان هفته!]
+        <button class="close-banner-btn"
+            onclick="document.getElementById('topAnnouncementBanner').style.display='none'">&times;</button>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container header-content">
+            <!-- 1. لوگو -->
+            <div class="logo-placeholder">[لوگو Watchena]</div>
+
+            <!-- 2. منوی اصلی -->
+            <nav class="nav-links">
+                <a href="#">صفحه اصلی</a>
+                <a href="#">مردانه</a>
+                <a href="#">زنانه</a>
+                <a href="#">برندها</a>
+                <a href="#">آگهی فروش</a>
+                <a href="#">خدمات پس از فروش</a>
+            </nav>
+
+            <!-- 3. باکس جستجوی استاندارد -->
+            <div class="search-box">
+                <input type="text" placeholder="جستجوی محصول، برند یا مدل...">
+                <button>🔍</button>
+            </div>
+
+            <!-- 4. دکمه‌های کاربری -->
+            <div class="header-actions">
+                <!-- بخش نوتیفیکیشن -->
+                <button class="notification-btn" title="اعلان‌ها">
+                    🔔
+                    <span class="notification-badge">۳</span>
+                </button>
+                <!-- ورود و سبد خرید -->
+                <button id="openAuthModalBtn">ورود / ثبت‌نام</button>
+                <button class="btn-primary">سبد خرید [۰]</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section & Attractive Slider -->
+        <section class="hero-section">
+            <div class="container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+                <div class="hero-content">
+                    <h1 class="hero-title">[تیتر جذاب: کشف دنیای ساعت‌های لوکس و اورجینال]</h1>
+                    <p class="hero-subtitle">معرفی اولیه ارزش پیشنهادی پلتفرم؛ با برترین برندهای جهان استایل خود را کامل
+                        کنید. پلتفرمی امن برای خرید، فروش و خدمات تخصصی ساعت.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">شروع خرید</button>
+                        <button onclick="document.getElementById('authModalOverlay').style.display='flex'">ورود /
+                            ثبت‌نام</button>
+                    </div>
+                </div>
+
+                <!-- بخش اسلایدر جذاب -->
+                <div class="slider-container">
+                    <div class="slider-visual image-placeholder">
+                        [محل قرارگیری اسلایدر جذاب تصاویر لوکس ساعت‌ها]
+                    </div>
+                    <div class="slider-arrow right">&gt;</div>
+                    <div class="slider-arrow left">&lt;</div>
+                    <div class="slider-dots">
+                        <div class="slider-dot active"></div>
+                        <div class="slider-dot"></div>
+                        <div class="slider-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Amazing Offers (پیشنهادهای شگفت‌انگیز) -->
+        <section class="common-section">
+            <div class="container">
+                <h2 class="section-title">پیشنهادهای شگفت‌انگیز ⚡</h2>
+                <div class="product-row">
+                    <!-- محصول تخفیف دار ۱ -->
+                    <div class="product-card">
+                        <div class="discount-badge">۲۰٪ تخفیف</div>
+                        <div class="product-img image-placeholder">[تصویر ساعت]</div>
+                        <div class="product-title">ساعت رولکس مدل ساب‌مارینر</div>
+                        <div class="price-section">
+                            <span class="old-price">۸۵۰,۰۰۰,۰۰۰ تومان</span>
+                            <span class="new-price">۶۸۰,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                    <!-- محصول تخفیف دار ۲ -->
+                    <div class="product-card">
+                        <div class="discount-badge">۱۵٪ تخفیف</div>
+                        <div class="product-img image-placeholder">[تصویر ساعت]</div>
+                        <div class="product-title">ساعت امگا اسپیدمستر</div>
+                        <div class="price-section">
+                            <span class="old-price">۴۰۰,۰۰۰,۰۰۰ تومان</span>
+                            <span class="new-price">۳۴۰,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                    <!-- محصول تخفیف دار ۳ -->
+                    <div class="product-card">
+                        <div class="discount-badge">۳۰٪ تخفیف</div>
+                        <div class="product-img image-placeholder">[تصویر ساعت]</div>
+                        <div class="product-title">ساعت تگ هویر کررا</div>
+                        <div class="price-section">
+                            <span class="old-price">۲۰۰,۰۰۰,۰۰۰ تومان</span>
+                            <span class="new-price">۱۴۰,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                    <!-- محصول تخفیف دار ۴ -->
+                    <div class="product-card">
+                        <div class="discount-badge">۱۰٪ تخفیف</div>
+                        <div class="product-img image-placeholder">[تصویر ساعت]</div>
+                        <div class="product-title">ساعت سیکو پرسپکس</div>
+                        <div class="price-section">
+                            <span class="old-price">۴۵,۰۰۰,۰۰۰ تومان</span>
+                            <span class="new-price">۴۰,۵۰۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Best Sellers (بیشترین فروش‌ها) -->
+        <section class="common-section">
+            <div class="container">
+                <h2 class="section-title">بیشترین فروش‌ها 📈</h2>
+                <div class="product-grid-layout">
+                    <!-- محصول پرفروش ۱ -->
+                    <div class="product-card">
+                        <div class="product-img image-placeholder">[تصویر ساعت]</div>
+                        <div class="product-title">کاسیو جی‌شاک GA-2100</div>
+                        <div class="price-section">
+                            <span class="new-price">۸,۵۰۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                    <!-- محصول پرفروش ۲ -->
+                    <div class="product-card">
+                        <div class="product-img image-placeholder">[تصویر ساعت]</div>
+                        <div class="product-title">تیسوت PRX اتوماتیک</div>
+                        <div class="price-section">
+                            <span class="new-price">۴۲,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                    <!-- محصول پرفروش ۳ -->
+                    <div class="product-card">
+                        <div class="product-img image-placeholder">[تصویر ساعت]</div>
+                        <div class="product-title">سیتیزن اکو-درایو</div>
+                        <div class="price-section">
+                            <span class="new-price">۱۸,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                    <!-- محصول پرفروش ۴ -->
+                    <div class="product-card">
+                        <div class="product-img image-placeholder">[تصویر ساعت]</div>
+                        <div class="product-title">اورینت بامبینو V4</div>
+                        <div class="price-section">
+                            <span class="new-price">۱۴,۵۰۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Popular Brands (محبوب‌ترین برندها) -->
+        <section class="common-section" style="background-color: var(--wire-box-bg);">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center;">محبوب‌ترین برندها ⭐</h2>
+                <div class="brands-grid">
+                    <div class="brand-item image-placeholder">[لوگو رولکس]</div>
+                    <div class="brand-item image-placeholder">[لوگو امگا]</div>
+                    <div class="brand-item image-placeholder">[لوگو کارتیه]</div>
+                    <div class="brand-item image-placeholder">[لوگو هوبلو]</div>
+                    <div class="brand-item image-placeholder">[لوگو سیکو]</div>
+                    <div class="brand-item image-placeholder">[لوگو کاسیو]</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Value Proposition (مزایای رقابتی) -->
+        <section class="common-section value-prop-section">
+            <div class="container">
+                <h2 class="section-title">چرا Watchena؟ (مزایای رقابتی)</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon-placeholder image-placeholder">[آیکون]</div>
+                        <h3 class="feature-title">ضمانت اصالت کالا</h3>
+                        <p class="feature-desc">ارائه گواهی اصالت فیزیکی و دیجیتال برای تمامی محصولات با تضمین بازگشت
+                            وجه.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-placeholder image-placeholder">[آیکون]</div>
+                        <h3 class="feature-title">ارسال سریع و امن</h3>
+                        <p class="feature-desc">بسته‌بندی ویژه و ارسال اکسپرس به سراسر کشور همراه با بیمه مرسوله.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-placeholder image-placeholder">[آیکون]</div>
+                        <h3 class="feature-title">خرید اقساطی بدون ضامن</h3>
+                        <p class="feature-desc">امکان خرید قسطی آسان ۴ ماهه از طریق اسنپ‌پی بدون نیاز به چک و سفته.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-placeholder image-placeholder">[آیکون]</div>
+                        <h3 class="feature-title">خدمات پس از فروش ویژه</h3>
+                        <p class="feature-desc">پشتیبانی تخصصی، گارانتی معتبر و شبکه تعمیرکاران مجرب در سراسر کشور.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Lead Generation & Social Media (باشگاه مشتریان و شبکه‌های اجتماعی) -->
+        <section class="common-section lead-gen-section">
+            <div class="container lead-social-wrapper">
+                <!-- باشگاه مشتریان -->
+                <div class="lead-form-box">
+                    <h2 class="section-title" style="margin-bottom: 10px;">باشگاه مشتریان Watchena</h2>
+                    <p>برای دریافت <b>کد تخفیف اولین خرید</b> و اطلاع از جدیدترین کالکشن‌ها، شماره موبایل یا ایمیل خود
+                        را وارد کنید.</p>
+                    <form class="form-group" onsubmit="event.preventDefault();">
+                        <input type="text" placeholder="شماره موبایل یا ایمیل خود را وارد کنید...">
+                        <button class="btn-primary">دریافت کد تخفیف</button>
+                    </form>
+                </div>
+
+                <!-- بخش همراه ما باشید -->
+                <div class="social-box">
+                    <h2 class="section-title" style="margin-bottom: 10px;">همراه ما باشید</h2>
+                    <p>ما را در شبکه‌های اجتماعی دنبال کنید</p>
+                    <div class="social-icons">
+                        <div class="social-icon" title="Instagram">[اینستاگرام]</div>
+                        <div class="social-icon" title="Telegram">[تلگرام]</div>
+                        <div class="social-icon" title="Twitter">[توییتر]</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Chat Widget (چت آنلاین شناور) -->
+    <div class="chat-widget" title="پشتیبانی و چت آنلاین">
+        💬
+    </div>
+
+    <!-- Standard Footer (فوتر استاندارد) -->
+    <footer>
+        <div class="container footer-grid">
+            <!-- ستون ۱ -->
+            <div class="footer-col footer-contact">
+                <h4>ارتباط با Watchena</h4>
+                <p>📍 آدرس: تهران، خیابان ولیعصر، برج ساعت، طبقه ۵</p>
+                <p>📞 تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                <p>✉️ ایمیل: info@watchena.com</p>
+                <p>🕒 ساعات کاری: شنبه تا پنجشنبه ۹ تا ۲۱</p>
+            </div>
+
+            <!-- ستون ۲ -->
+            <div class="footer-col">
+                <h4>دسترسی سریع</h4>
+                <ul>
+                    <li><a href="#">فروشگاه</a></li>
+                    <li><a href="#">مردانه</a></li>
+                    <li><a href="#">زنانه</a></li>
+                    <li><a href="#">پیگیری سفارشات</a></li>
+                    <li><a href="#">وبلاگ و مقالات آموزشی</a></li>
+                </ul>
+            </div>
+
+            <!-- ستون ۳ -->
+            <div class="footer-col">
+                <h4>خدمات مشتریان</h4>
+                <ul>
+                    <li><a href="#">سوالات متداول</a></li>
+                    <li><a href="#">قوانین و مقررات بازگشت وجه</a></li>
+                    <li><a href="#">حریم خصوصی</a></li>
+                    <li><a href="#">ثبت درخواست تعمیرات</a></li>
+                    <li><a href="#">شرایط خرید اقساطی</a></li>
+                </ul>
+            </div>
+
+            <!-- ستون ۴ -->
+            <div class="footer-col">
+                <h4>نمادهای اعتماد</h4>
+                <div class="trust-seals">
+                    <div class="trust-seal image-placeholder">[اینماد]</div>
+                    <div class="trust-seal image-placeholder">[ساماندهی]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>کلیه حقوق مادی و معنوی این وب‌سایت متعلق به Watchena می‌باشد. طراحی و توسعه: وایرفریم تستی © ۱۴۰۲</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================
+         AUTH MODAL (ورود / ثبت‌نام / فراموشی رمز)
+         ========================================= -->
+    <div class="modal-overlay" id="authModalOverlay">
+        <div class="auth-modal">
+            <!-- دکمه بستن -->
+            <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+
+            <!-- عنوان متغیر مدال -->
+            <h2 class="auth-modal-title" id="authModalTitle">ورود یا ثبت‌نام</h2>
+
+            <!-- ====== بخش اصلی (ورود / ثبت نام) ====== -->
+            <div id="mainAuthSection">
+                <!-- تب‌های نوع ورود -->
+                <div class="auth-tabs">
+                    <div class="auth-tab active" id="tabOtp">کد تایید (سریع)</div>
+                    <div class="auth-tab" id="tabPassword">رمز عبور</div>
+                </div>
+
+                <!-- فرم ورود با پیامک (OTP) -->
+                <div id="formOtp" style="display: block;">
+                    <div class="auth-form-group">
+                        <input type="text" placeholder="شماره موبایل خود را وارد کنید...">
+                    </div>
+                    <button class="auth-submit-btn">دریافت کد تایید</button>
+                </div>
+
+                <!-- فرم ورود با رمز عبور -->
+                <div id="formPassword" style="display: none;">
+                    <div class="auth-form-group">
+                        <input type="text" placeholder="ایمیل یا شماره موبایل...">
+                    </div>
+                    <div class="auth-form-group">
+                        <input type="password" placeholder="رمز عبور...">
+                        <!-- لینک ورود به بخش فراموشی رمز -->
+                        <a href="#" class="forgot-password-link" id="goToForgotBtn">رمز عبور خود را فراموش کرده‌اید؟</a>
+                    </div>
+                    <button class="auth-submit-btn">ورود به حساب</button>
+                </div>
+
+                <div class="auth-divider">
+                    <span>یا</span>
+                </div>
+
+                <!-- ورود با گوگل -->
+                <button class="google-login-btn">
+                    [G] ورود سریع با گوگل
+                </button>
+            </div>
+
+            <!-- ====== بخش بازیابی رمز عبور ====== -->
+            <div id="forgotPasswordSection" style="display: none;">
+                <p class="forgot-password-message">
+                    برای بازیابی رمز عبور، ایمیل یا شماره موبایل ثبت شده خود را وارد کنید تا لینک یا کد تایید برای شما
+                    ارسال شود.
+                </p>
+
+                <div class="auth-form-group">
+                    <input type="text" placeholder="ایمیل یا شماره موبایل...">
+                </div>
+
+                <button class="auth-submit-btn">ارسال کد / لینک بازیابی</button>
+
+                <!-- دکمه بازگشت به صفحه ورود -->
+                <a href="#" class="forgot-password-link" id="backToLoginBtn"
+                    style="text-align: center; display: block; margin-top: 15px;">
+                    بازگشت به صفحه ورود
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts for Modal Behavior -->
+    <script>
+        // DOM Elements
+        const authModalOverlay = document.getElementById('authModalOverlay');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const openAuthModalBtn = document.getElementById('openAuthModalBtn');
+        const authModalTitle = document.getElementById('authModalTitle');
+
+        // Sections
+        const mainAuthSection = document.getElementById('mainAuthSection');
+        const forgotPasswordSection = document.getElementById('forgotPasswordSection');
+
+        // Tabs & Forms
+        const tabOtp = document.getElementById('tabOtp');
+        const tabPassword = document.getElementById('tabPassword');
+        const formOtp = document.getElementById('formOtp');
+        const formPassword = document.getElementById('formPassword');
+
+        // Navigation Links inside Modal
+        const goToForgotBtn = document.getElementById('goToForgotBtn');
+        const backToLoginBtn = document.getElementById('backToLoginBtn');
+
+        // 1. باز کردن مدال
+        openAuthModalBtn.addEventListener('click', function () {
+            authModalOverlay.style.display = 'flex';
+            // همیشه با باز شدن مدال، به حالت اولیه برگردیم
+            resetToLoginState();
+        });
+
+        // 2. بستن مدال با دکمه ضربدر
+        closeModalBtn.addEventListener('click', function () {
+            authModalOverlay.style.display = 'none';
+        });
+
+        // 3. بستن مدال با کلیک در فضای خالی بیرون مدال
+        authModalOverlay.addEventListener('click', function (e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        // 4. سوییچ بین تب پیامک و رمز عبور
+        tabOtp.addEventListener('click', function () {
+            tabOtp.classList.add('active');
+            tabPassword.classList.remove('active');
+            formOtp.style.display = 'block';
+            formPassword.style.display = 'none';
+        });
+
+        tabPassword.addEventListener('click', function () {
+            tabPassword.classList.add('active');
+            tabOtp.classList.remove('active');
+            formPassword.style.display = 'block';
+            formOtp.style.display = 'none';
+        });
+
+        // 5. رفتن به بخش فراموشی رمز عبور
+        goToForgotBtn.addEventListener('click', function (e) {
+            e.preventDefault(); // جلوگیری از پرش صفحه به بالا
+            mainAuthSection.style.display = 'none';
+            forgotPasswordSection.style.display = 'block';
+            authModalTitle.innerText = 'بازیابی رمز عبور';
+        });
+
+        // 6. بازگشت از فراموشی رمز به بخش ورود
+        backToLoginBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            resetToLoginState();
+        });
+
+        // تابع کمکی برای بازگرداندن مدال به حالت پیش‌فرض (ورود)
+        function resetToLoginState() {
+            mainAuthSection.style.display = 'block';
+            forgotPasswordSection.style.display = 'none';
+            authModalTitle.innerText = 'ورود یا ثبت‌نام';
+
+            // به تب پیش‌فرض (مثلا ورود با رمز یا OTP) برویم
+            tabPassword.classList.add('active');
+            tabOtp.classList.remove('active');
+            formPassword.style.display = 'block';
+            formOtp.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
