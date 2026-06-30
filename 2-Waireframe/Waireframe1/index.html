@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchena Wireframes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>وایرفریم‌های پروژه Watchena</h1>
+            <p>نمای ساختاری و ناوبری بخش‌های مختلف پلتفرم هماهنگ با PRD</p>
+        </header>
+
+        <!-- ۰. لندینگ -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۰. صفحه فرود اصلی سایت (Landing Page - قبل از احراز هویت)</div>
+            <div class="wireframe-box">
+                <div class="wf-navbar">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-weight: bold; color: var(--accent-color); font-size: 13pt;">Watchena
+                            Logo</span>
+                    </div>
+                    <ul class="wf-nav-links">
+                        <li style="background: var(--accent-color);">🏠 خانه</li>
+                        <li>⌚ کاتالوگ محصولات</li>
+                        <li>🏷️ برندها و غرفه‌ها</li>
+                        <li>ℹ️ درباره ما</li>
+                        <li style="border: 1px solid #fff;">👤 ورود / ثبت‌نام</li>
+                    </ul>
+                </div>
+
+                <div class="wf-block"
+                    style="padding: 45px 20px; background: #1e293b; color: white; border: none; margin-bottom: 15px; border-radius: 6px; text-align: center;">
+                    <h2 style="font-size: 18pt; color: #f59e0b; margin-bottom: 12px; font-weight: 800;">زمان در دستان
+                        شماست؛ لوکس و هوشمند</h2>
+                    <p
+                        style="font-size: 10.5pt; color: #cbd5e1; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        بزرگترین پلتفرم چندفروشگاهی ساعت مچی در کشور. کالکشن‌های اورجینال و های‌کپی تایید شده را به صورت
+                        نقد یا اقساط بلندمدت بدون ضامن خریداری کنید.</p>
+                    <div style="display: flex; gap: 12px; justify-content: center;">
+                        <div class="wf-btn-mock"
+                            style="width: 160px; background: var(--accent-color); color: white; margin: 0; cursor: pointer;">
+                            🛍️ مشاهده و خرید ساعت</div>
+                        <div class="wf-btn-mock"
+                            style="width: 160px; background: transparent; border: 1px solid white; color: white; margin: 0; cursor: pointer;">
+                            🔐 ورود با کد یکبار مصرف</div>
+                    </div>
+                </div>
+
+                <div class="wf-grid-3">
+                    <div class="wf-block" style="background: white; border: 1px solid #cbd5e1; padding: 20px;">🛡️<br><b
+                            style="color:var(--primary-color);">تضمین اصالت و کاتالوگ</b><br><span
+                            style="font-size:8.5pt;">بررسی موشکافانه اصالت موتور و کارشناسی تخصصی غرفه‌ها</span></div>
+                    <div class="wf-block" style="background: white; border: 1px solid #cbd5e1; padding: 20px;">🗓️<br><b
+                            style="color:var(--primary-color);">سیستم اقساطی آنلاین</b><br><span
+                            style="font-size:8.5pt;">خرید اعتباری منعطف با چک صیادی بدون نیاز به ضامن</span></div>
+                    <div class="wf-block" style="background: white; border: 1px solid #cbd5e1; padding: 20px;">🚀 <br><b
+                            style="color:var(--primary-color);">ارسال اکسپرس بیمه شده</b><br><span
+                            style="font-size:8.5pt;">تحویل فوق‌سریع همراه با بیمه رسمی مرسولات گران‌قیمت</span></div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
+                    <div class="wf-block"
+                        style="background: #fffbeb; border: 1px dashed #b3925c; height: 90px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #b3925c;">
+                        🖼️ بنر کمپین ویژه: تخفیف ۲۰ درصدی کالکشن ۲۰۲۶ برندهای سوئیسی
+                    </div>
+                    <div class="wf-block"
+                        style="background: #f0fdf4; border: 1px dashed #22c55e; height: 90px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #16a34a;">
+                        🏪 غرفه‌دار شوید: ساعت‌های انبار خود را در بازار بزرگ واتچنا به فروش برسانید
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۱. احراز هویت -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۱. احراز هویت و امنیت (ورود و ثبت‌نام یکپارچه)</div>
+            <div class="wireframe-box">
+                <div class="wf-navbar">
+                    <div>Watchena | لوگو فروشگاه</div>
+                    <div class="wf-search-mock">بازگشت به صفحه اصلی ←</div>
+                </div>
+                <div class="wf-auth-card">
+                    <div style="font-weight: bold; margin-bottom: 15px; font-size: 11pt;">فرم ورود / ثبت نام یکپارچه
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                        <div class="wf-block"
+                            style="flex: 1; padding: 5px; background: #e2e8f0; color: #1a1a1a; font-weight: bold;">رمز
+                            یکبار مصرف (OTP)</div>
+                        <div class="wf-block" style="flex: 1; padding: 5px;">ایمیل و رمز عبور</div>
+                    </div>
+                    <div class="wf-input-mock">📱 شماره موبایل (مثال: 09130000000)</div>
+                    <div class="wf-btn-mock">ارسال کد تایید پیامکی</div>
+                    <div style="margin: 15px 0; color: #94a3b8; font-size: 9pt;">یا</div>
+                    <div class="wf-btn-mock wf-btn-google">🔴 ورود سریع با حساب گوگل (Google Account)</div>
+                    <div
+                        style="margin-top: 15px; font-size: 8.5pt; color: var(--accent-color); text-align: right; cursor: pointer;">
+                        رمز عبور خود را فراموش کرده‌اید؟ (بازیابی رمز)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۲. بخش‌های کاربری -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۲. بخش‌های کاربری (فروشگاه و کاتالوگ محصولات)</div>
+            <div class="wireframe-box">
+                <div
+                    style="background: #b3925c; color: white; padding: 4px; text-align: center; font-size: 8.5pt; margin-bottom: 8px; border-radius: 4px;">
+                    📣 نوار اعلان: فرستادن رایگان برای خریدهای بالای ۵ میلیون تومان | کد تخفیف: WATCH2026</div>
+                <div class="wf-navbar">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-weight: bold; color: var(--accent-color);">Watchena Logo</span>
+                        <div class="wf-search-mock">🔍 جستجوی هوشمند ساعت (نام، برند، SKU...)</div>
+                    </div>
+                    <ul class="wf-nav-links">
+                        <li style="background: var(--accent-color);">🛒 سبد خرید (Wizard)</li>
+                        <li>👤 ورود / پنل کاربری</li>
+                    </ul>
+                </div>
+                <div
+                    style="background: #e2e8f0; padding: 8px; border-radius: 4px; margin-bottom: 12px; font-size: 9pt; display: flex; gap: 15px; font-weight: bold;">
+                    <span>🏷️ مگا منو برندها</span> <span>⚙️ نوع موتور</span> <span>💎 کالکشن‌های جدید</span> <span>📞
+                        ارتباط با ما</span> <span>ℹ️ درباره ما</span>
+                </div>
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu" style="width: 220px;">
+                        <div
+                            style="font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 5px; font-size: 9pt;">
+                            🎛️ فیلترهای پیشرفته کاتالوگ</div>
+                        <div class="wf-menu-item">▫️ برند ساعت</div>
+                        <div class="wf-menu-item">▫️ جنس بند (چرم/استیل)</div>
+                        <div class="wf-menu-item">▫️ فرم قاب (گرد/مربع)</div>
+                        <div class="wf-menu-item">▫️ بازه قیمتی (اسلایدر)</div>
+                        <div class="wf-menu-item">▫️ مقاومت در برابر آب</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 9pt; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                            <div>🔀 مرتب‌سازی: پرفروش‌ترین | ارزان‌ترین | گران‌ترین</div>
+                            <div>نمایش: ▦ گرید | ▤ لیست</div>
+                        </div>
+                        <div class="wf-grid-3">
+                            <div class="wf-block">🖼️ تصویر ۳۶۰° ساعت<br><b>ساعت اتوماتیک برند X</b><br>💰 قیمت + دکمه
+                                خرید</div>
+                            <div class="wf-block">🖼️ تصویر ساعت<br><b>مدل کوارتز لوکس Y</b><br>🏷️ شگفت‌انگیز</div>
+                            <div class="wf-block">🖼️ تصویر ساعت<br><b>مدل کلاسیک Z</b><br>❌ ناموجود (خبرم کن)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section">
+            <div class="wireframe-title">۲.۱ صفحه اختصاصی جزئیات هر محصول (Product Detail Page)</div>
+            <div class="wireframe-box">
+                <div class="wf-navbar">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-weight: bold; color: var(--accent-color);">Watchena Logo</span>
+                        <div class="wf-search-mock">🔍 جستجوی هوشمند ساعت...</div>
+                    </div>
+                    <ul class="wf-nav-links">
+                        <li>🛒 سبد خرید</li>
+                        <li>👤 ورود / پنل کاربری</li>
+                    </ul>
+                </div>
+
+                <div style="font-size: 8.5pt; color: var(--text-muted); margin-bottom: 15px;">🔗 خانه / ساعت مچی مردانه
+                    / برند کلاسیک رومانسون / مدل کونوگراف X-2026</div>
+
+                <div class="wf-main-layout" style="min-height: auto; gap: 20px;">
+                    <div class="wf-block"
+                        style="width: 320px; height: 350px; display: flex; flex-direction: column; justify-content: space-between; background: white; border: 1px solid #cbd5e1; padding: 10px;">
+                        <div
+                            style="height: 200px; display: flex; align-items: center; justify-content: center; border-bottom: 1px dashed #cbd5e1; font-weight: bold;">
+                            🖼️ تصویر اصلی محصول (ساعت مچی لوکس)
+                        </div>
+                        <div style="display: flex; gap: 6px; justify-content: center; padding: 5px 0;">
+                            <div
+                                style="width: 45px; height: 45px; border: 1px solid #cbd5e1; font-size: 7.5pt; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
+                                📸 زاویه ۲</div>
+                            <div
+                                style="width: 45px; height: 45px; border: 1px solid #cbd5e1; font-size: 7.5pt; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
+                                📸 روی دست</div>
+                            <div
+                                style="width: 45px; height: 45px; border: 1px solid #b3925c; font-size: 7.5pt; display: flex; align-items: center; justify-content: center; color: #b3925c; font-weight: bold; border-radius: 4px; background: #fffdf9;">
+                                🔄 ۳۶۰°</div>
+                        </div>
+                        <div
+                            style="background: #fef2f2; padding: 6px; font-size: 8pt; font-weight: bold; color: #ef4444; border-radius: 4px; text-align: center;">
+                            🔥 ۵ مشتری دیگر در حال بررسی این ساعت هستند</div>
+                    </div>
+
+                    <div class="wf-content-area" style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <h2 style="font-size: 14pt; color: var(--primary-color); font-weight: 800;">ساعت مچی
+                                    اتوماتیک کونوگراف لوکس مدل ۲۰۲۶</h2>
+                                <p style="font-size: 9pt; color: var(--text-muted); margin-top: 4px;">Luxury Automatic
+                                    Chronograph Watch | SKU: W-2026-CH</p>
+                            </div>
+                            <div style="text-align: left; font-size: 9.5pt; color: #eab308; font-weight: bold;">⭐ ۴.۷
+                                (۴۵ دیدگاه تایید شده)</div>
+                        </div>
+
+                        <div
+                            style="border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 10px 0; display: flex; gap: 20px; font-size: 9pt; background: #f8fafc; padding-right: 10px; border-radius: 4px;">
+                            <span>⚙️ <b>نوع موتور:</b> اتوماتیک ۲۱ سنگ ژاپنی</span>
+                            <span>💎 <b>جنس شیشه:</b> یاقوت کبود ضد خش</span>
+                            <span>🛡️ <b>ضد آب:</b> 50M (مناسب شنای سطحی)</span>
+                        </div>
+
+                        <div
+                            style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 12px; border-radius: 6px; font-size: 9pt;">
+                            <div style="font-weight: bold; margin-bottom: 6px; color: var(--accent-color);">🏪 گزینه‌های
+                                خرید غرفه‌داران پلتفرم:</div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px; border: 1px solid #22c55e; border-radius: 4px; margin-bottom: 6px;">
+                                <div>🏪 <b>غرفه انتخابی:</b> گالری دیپلمات (رتبه الف) | 🛡️ گارانتی ۲۴ ماهه طلایی</div>
+                                <div style="font-weight: bold; color: green; font-size: 10.5pt;">۴,۲۰۰,۰۰۰ تومان</div>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px; border: 1px solid #cbd5e1; border-radius: 4px; opacity: 0.75;">
+                                <div>🏪 <b>سایر فروشندگان:</b> ساعت تیک‌تاک اصفهان | 🛡️ گارانتی ۱۲ ماهه شرکتی</div>
+                                <div style="font-weight: bold; color: #475569;">۴,۰۵۰,۰۰۰ تومان</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 10px; border-top: 1px solid #eee;">
+                            <div>
+                                <span
+                                    style="font-size: 9pt; color: var(--text-muted); text-decoration: line-through; display: block;">۴,۸۰۰,۰۰۰
+                                    تومان</span>
+                                <h3 style="font-size: 16pt; color: var(--primary-color); font-weight: 800;">۴,۲۰۰,۰۰۰
+                                    <span style="font-size: 10pt; font-weight: normal;">تومان</span>
+                                </h3>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <div class="wf-btn-mock"
+                                    style="margin: 0; width: 150px; background: green; cursor: pointer;">🛒 خرید نقدی
+                                    (سبد خرید)</div>
+                                <div class="wf-btn-mock"
+                                    style="margin: 0; width: 170px; background: #b3925c; cursor: pointer;">🗓️ محاسبه و
+                                    خرید اقساطی آنلاین</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 15px;">
+                    <div style="display: flex; gap: 15px; font-weight: bold; font-size: 9.5pt; margin-bottom: 10px;">
+                        <span
+                            style="border-bottom: 2px solid var(--accent-color); padding-bottom: 4px; color: var(--accent-color);">📋
+                            مشخصات فنی کامل</span>
+                        <span style="color:#718096; cursor: pointer;">💬 نظرات و نقد تخصصی (۴۵)</span>
+                        <span style="color:#718096; cursor: pointer;">❓ پرسش و پاسخ کاربران</span>
+                    </div>
+                    <div class="wf-block"
+                        style="text-align: right; font-size: 9pt; background: white; border: 1px solid #cbd5e1; padding: 15px; line-height: 1.8;">
+                        🔹 <b>جنس بدنه:</b> استیل ضد زنگ ۳۱۶ رنگ ثابت ضد حساسیت | 🔹 <b>جنس بند:</b> چرم طبیعی طرح
+                        سوسماری دست‌دوز<br>
+                        🔹 <b>قطر قاب:</b> ۴۲ میلی‌متر (استاندارد مردانه) | 🔹 <b>منبع انرژی:</b> کینتیک (شارژ اتوماتیک
+                        با لرزش مچ دست بدون نیاز به باتری)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۳. پنل کاربران (با ادغام بازارچه و C2C) -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۳. داشبورد و پنل کاربران (User Dashboard)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 10pt;">👤 نام کاربر خوش‌آمدید</div>
+                            <div style="font-size: 8pt; color: green; margin-top: 4px;">کیف پول: ۱,۵۰۰,۰۰۰ تومان</div>
+                        </div>
+                        <div class="wf-menu-item active">🏠 داشبورد کاربری / خلاصه وضعیت</div>
+                        <div class="wf-menu-item">📦 تاریخچه سفارشات و رهگیری پست <span class="wf-menu-badge">۲
+                                جاری</span></div>
+                        <div class="wf-menu-item">🗓️ مدیریت و پرداخت آنلاین اقساط <span class="wf-menu-badge"
+                                style="background:#ef4444; color:white;">۱ معوق</span></div>
+                        <div class="wf-menu-item">💳 کیف پول دیجیتال (Wallet)</div>
+                        <div class="wf-menu-item">🔄 درخواست‌های مرجوعی کالا (RMA)</div>
+                        <div class="wf-menu-item">❤️ لیست علاقه‌مندی‌ها و اعلان‌ها</div>
+                        <div class="wf-menu-item">🛠️ اطلاعات حساب، آدرس‌ها و امنیت</div>
+
+                        <!-- منوهای بازارچه که به پنل کاربری منتقل شدند -->
+                        <div
+                            style="font-weight: bold; font-size: 9.5pt; color: #16a34a; padding: 10px 12px 0 12px; border-top: 1px solid #e2e8f0; margin-top: 5px;">
+                            بازارچه کاربران (C2C)</div>
+                        <div class="wf-menu-item">📋 آگهی‌های من <span class="wf-menu-badge">۲</span></div>
+                        <div class="wf-menu-item" style="background: #e2e8f0; border: 1px dashed #64748b;">➕ ثبت آگهی
+                            ساعت کارکرده</div>
+                        <div class="wf-menu-item">💬 پیام‌رسان داخلی <span class="wf-menu-badge"
+                                style="background:red; color:white;">۱ جدید</span></div>
+                        <div class="wf-menu-item">🛡️ درخواست کارشناسی اصالت</div>
+                        <div class="wf-menu-item">💳 تراکنش‌های امن (Escrow)</div>
+
+                        <div class="wf-menu-item" style="color: #ef4444; margin-top: 20px;">🚪 خروج از حساب</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="font-weight: bold; margin-bottom: 15px; font-size: 11pt; color: var(--primary-color);">
+                            خلاصه فعالیت‌های اخیر کاربر</div>
+                        <div class="wf-grid-3">
+                            <div class="wf-block" style="background: #fff; border: 1px solid #cbd5e1;">📋 <b>آخرین
+                                    سفارش</b><br>وضعیت: ارسال شده</div>
+                            <div class="wf-block" style="background: #fff; border: 1px solid #cbd5e1;">💰 <b>وضعیت
+                                    اقساط</b><br>سررسید بعدی: ۱۰ تیر</div>
+                            <div class="wf-block" style="background: #fff; border: 1px solid #cbd5e1;">🔔 <b>اعلان
+                                    جدید</b><br>ساعت برند تک موند موجود شد</div>
+                        </div>
+                        <div class="wf-block"
+                            style="height: 120px; display: flex; align-items: center; justify-content: center;">📍 نقشه
+                            و نمای گرافیکی وضعیت رهگیری مرسوله پستی ساعت</div>
+
+                        <!-- محتوای بازارچه که به داشبورد کاربر منتقل شد -->
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 25px; margin-bottom: 15px; font-size: 10pt; font-weight: bold; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+                            <span style="color: #16a34a;">بازارچه (C2C) - لیست آگهی‌های شما</span>
+                            <span
+                                style="background: #16a34a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 8.5pt; cursor: pointer;">+
+                                ثبت آگهی جدید</span>
+                        </div>
+                        <div class="wf-block"
+                            style="text-align: right; margin-bottom: 15px; font-size: 9pt; background: #f8fafc; border: 1px solid #cbd5e1;">
+                            <div
+                                style="display: flex; justify-content: space-between; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 8px;">
+                                <span style="font-weight: bold; color: var(--primary-color);">ساعت رولکس سابمارینر
+                                    کارکرده (مدل 2020)</span>
+                                <span style="color: #b3925c; font-weight: bold;">۹۵۰,۰۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <div style="display: flex; gap: 15px; color: #64748b; margin-bottom: 10px;">
+                                <span>📦 وضعیت جعبه: دارد</span>
+                                <span>📄 مدارک: دارد</span>
+                                <span>🛡️ کارشناسی سایت: <span style="color: green;">تایید شده ✔️</span></span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button
+                                    style="background: var(--primary-color); color: white; border: none; padding: 4px 10px; border-radius: 4px; font-size: 8.5pt; cursor: pointer;">ویرایش
+                                    آگهی</button>
+                                <button
+                                    style="background: #f59e0b; color: white; border: none; padding: 4px 10px; border-radius: 4px; font-size: 8.5pt; cursor: pointer;">ارتقا
+                                    (نردبان)</button>
+                                <button
+                                    style="background: transparent; border: 1px solid #ef4444; color: #ef4444; padding: 4px 10px; border-radius: 4px; font-size: 8.5pt; cursor: pointer;">توقف
+                                    نمایش</button>
+                            </div>
+                        </div>
+
+                        <div style="font-weight: bold; margin-bottom: 10px; font-size: 10pt;">💬 آخرین پیام‌ها و مذاکرات
+                            (Safe Chat)</div>
+                        <div class="wf-block"
+                            style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 10px; border-left: 4px solid #3b82f6;">
+                            <div>
+                                <div style="font-weight: bold; font-size: 9.5pt; color: #1e3a8a;">خریدار: کاربر ۵۹۸۲
+                                </div>
+                                <div style="font-size: 8.5pt; color: #64748b;">سلام، آیا امکان تخفیف برای خرید نقدی هست؟
+                                    وجه رو تو پرداخت امن شارژ کردم.</div>
+                            </div>
+                            <button
+                                style="background: #3b82f6; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 8.5pt; cursor: pointer;">ورود
+                                به چت</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۴. پنل شرکت‌ها -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۴. پنل شرکت‌ها و پخش‌کنندگان (Distributors Panel)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu" style="border-color: #6366f1;">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 10pt; color: #4f46e5;">🏢 شرکت پخش نمونه</div>
+                            <div style="font-size: 8pt; color: #64748b; margin-top: 4px;">کد تامین‌کننده: D-105</div>
+                        </div>
+                        <div class="wf-menu-item active">📦 مدیریت موجودی و فروش عمده</div>
+                        <div class="wf-menu-item">🚚 مدیریت سفارشات B2B <span class="wf-menu-badge"
+                                style="background:#4f46e5; color:white;">۲</span></div>
+                        <div class="wf-menu-item">📜 قراردادها و امور مالی</div>
+                        <div class="wf-menu-item">📊 گزارش‌های تحلیلی توزیع</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 10pt; font-weight: bold;">
+                            <span>لیست موجودی عمده جهت تامین پلتفرم</span>
+                            <span
+                                style="background: #4f46e5; color: white; padding: 4px 10px; border-radius: 4px; font-size: 8.5pt; cursor: pointer;">+
+                                ثبت کالا جدید</span>
+                        </div>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 9pt; text-align: center;">
+                            <tr style="background: #e0e7ff; color: #3730a3;">
+                                <th style="padding: 8px;">کد کالا</th>
+                                <th>نام محصول</th>
+                                <th>موجودی کل (کارتن)</th>
+                                <th>حداقل سفارش (MOQ)</th>
+                                <th>قیمت همکاری</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #c7d2fe;">
+                                <td style="padding: 8px;">CAS-901</td>
+                                <td>کاسیو جی‌شاک اورجینال</td>
+                                <td>۵۰</td>
+                                <td>۵ عدد</td>
+                                <td>۳,۱۰۰,۰۰۰ تومان</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #c7d2fe;">
+                                <td style="padding: 8px;">ROM-220</td>
+                                <td>رومانسون کلاسیک</td>
+                                <td>۱۲۰</td>
+                                <td>۱۰ عدد</td>
+                                <td>۲,۴۵۰,۰۰۰ تومان</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۵. پنل فروشگاه -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۵. پنل فروشگاه (Vendor / Store Panel)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu" style="border-color: #b3925c;">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 10pt; color: var(--accent-color);">🏪 گالری ساعت
+                                دیپلمات</div>
+                            <div style="font-size: 8pt; color: #64748b; margin-top: 4px;">کد فروشنده: V-402</div>
+                        </div>
+                        <div class="wf-menu-item">📊 داشبورد آماری فروشگاه</div>
+                        <div class="wf-menu-item">⚙️ تنظیمات پروفایل، آدرس و لوگوی شعبه</div>
+                        <div class="wf-menu-item active">⌚ مدیریت محصولات و تنوع قیمت‌گذاری <span
+                                class="wf-menu-badge">۲۴ کالا</span></div>
+                        <div class="wf-menu-item">➕ درخواست افزودن محصول جدید</div>
+                        <div class="wf-menu-item">📦 سفارشات دریافتی فروشگاه <span class="wf-menu-badge"
+                                style="background: #b3925c; color: white;">۳ جدید</span></div>
+                        <div class="wf-menu-item">🧾 امور مالی، کارمزد پلتفرم و تسویه حساب</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 10pt; font-weight: bold;">
+                            <span>لیست محصولات موجود در انبار فروشنده</span>
+                            <span
+                                style="color: white; background: green; padding: 2px 8px; border-radius: 4px; font-size: 8.5pt; cursor: pointer;">+
+                                ثبت کالا جدید</span>
+                        </div>
+                        <div class="wf-block" style="height: 180px; text-align: right; font-size: 9.5pt;">
+                            <table style="width: 100%; border-collapse: collapse; font-size: 9pt;">
+                                <tr style="background: #cbd5e1; text-align: center;">
+                                    <th style="padding: 5px;">کد SKU</th>
+                                    <th>نام ساعت</th>
+                                    <th>موجودی</th>
+                                    <th>قیمت پایه</th>
+                                    <th>وضعیت تایید</th>
+                                </tr>
+                                <tr style="text-align: center; border-bottom: 1px solid #cbd5e1;">
+                                    <td style="padding: 6px;">W-708</td>
+                                    <td>سارتوریا اتوماتیک رُزگلد</td>
+                                    <td>۵ عدد</td>
+                                    <td>۴,۲۰۰,۰۰۰</td>
+                                    <td style="color: green;">✔️ فعال</td>
+                                </tr>
+                                <tr style="text-align: center; border-bottom: 1px solid #cbd5e1;">
+                                    <td style="padding: 6px;">W-902</td>
+                                    <td>رولکس دیت جاست های‌کپی</td>
+                                    <td>۲ عدد</td>
+                                    <td>۹,۵۰۰,۰۰۰</td>
+                                    <td style="color: orange;">⏳ در انتظار تایید مدیر</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۶. پنل تعمیرکاران -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۶. پنل تعمیرکاران (Repairers Panel)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu" style="border-color: #64748b;">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 10pt; color: #475569;">🛠️ مرکز تعمیرات واتچنا
+                            </div>
+                        </div>
+                        <div class="wf-menu-item active">📅 رزرو نوبت تعمیر</div>
+                        <div class="wf-menu-item">🔍 پیگیری وضعیت تعمیر (تیکت)</div>
+                        <div class="wf-menu-item">🧾 برآورد هزینه و پرداخت</div>
+                        <div class="wf-menu-item">📜 سوابق تعمیرات دستگاه‌ها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="font-weight: bold; margin-bottom: 15px; font-size: 10pt;">🔍 وضعیت فعلی دستگاه شما
+                            (کد رهگیری: REP-8832)</div>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 20px; border-radius: 6px; border: 1px solid #cbd5e1; margin-bottom: 15px;">
+                            <div style="text-align: center; color: green; font-weight: bold;">📦<br>دریافت شد</div>
+                            <div style="flex: 1; height: 2px; background: green; margin: 0 10px;"></div>
+                            <div style="text-align: center; color: green; font-weight: bold;">🔍<br>در حال بررسی</div>
+                            <div style="flex: 1; height: 2px; background: #cbd5e1; margin: 0 10px;"></div>
+                            <div style="text-align: center; color: #94a3b8;">⏳<br>منتظر تایید هزینه</div>
+                            <div style="flex: 1; height: 2px; background: #cbd5e1; margin: 0 10px;"></div>
+                            <div style="text-align: center; color: #94a3b8;">🛠️<br>در حال تعمیر</div>
+                            <div style="flex: 1; height: 2px; background: #cbd5e1; margin: 0 10px;"></div>
+                            <div style="text-align: center; color: #94a3b8;">✅<br>آماده تحویل</div>
+                        </div>
+                        <div class="wf-block" style="text-align: right; background: #fffbeb; border-color: #f59e0b;">
+                            ⚠️ <b>پیش‌فاکتور صادر شده:</b> تعویض شیشه یاقوت کبود و سرویس موتور.<br>
+                            مبلغ برآورد شده: <b>۱,۲۰۰,۰۰۰ تومان</b><br>
+                            <button
+                                style="margin-top: 10px; background: green; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold;">✔️
+                                تایید و پرداخت آنلاین</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۷. خدمات پس از فروش -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۷. خدمات پس از فروش (After-Sales Services)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu" style="border-color: #0ea5e9;">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 10pt; color: #0284c7;">💎 خدمات ویژه مشتریان</div>
+                        </div>
+                        <div class="wf-menu-item">🛡️ مدیریت گارانتی‌ها</div>
+                        <div class="wf-menu-item active">📜 شناسنامه اصالت دیجیتال</div>
+                        <div class="wf-menu-item">☂️ بیمه محصولات لوکس</div>
+                        <div class="wf-menu-item">🔔 یادآوری سرویس دوره‌ای</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <span style="font-weight: bold; font-size: 10pt;">گواهی اصالت و مالکیت دیجیتال
+                                (NFT-like)</span>
+                            <span class="wf-search-mock" style="width:150px; text-align:center;">کد سریال:
+                                RX-8842</span>
+                        </div>
+                        <div
+                            style="background: linear-gradient(135deg, #1e293b, #0f172a); color: #f8fafc; border-radius: 12px; padding: 25px; border: 1px solid #b3925c; position: relative; overflow: hidden; font-family: monospace;">
+                            <div style="position: absolute; top: -20px; right: -20px; font-size: 60pt; opacity: 0.1;">💎
+                            </div>
+                            <h3 style="color: #b3925c; margin-bottom: 15px; font-family: sans-serif;">Watchena
+                                Authenticity Certificate</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 10pt;">
+                                <div><b style="color: #94a3b8;">Brand:</b> Rolex</div>
+                                <div><b style="color: #94a3b8;">Model:</b> Submariner Date</div>
+                                <div><b style="color: #94a3b8;">Serial Number:</b> 8932XX11</div>
+                                <div><b style="color: #94a3b8;">Owner:</b> Ali Rezaei</div>
+                                <div><b style="color: #94a3b8;">Purchase Date:</b> 2026-05-12</div>
+                                <div style="color: #22c55e;"><b>Status:</b> Verified Original ✔️</div>
+                            </div>
+                            <div style="margin-top: 25px; text-align: left;">
+                                <button
+                                    style="background: #b3925c; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 8.5pt; cursor: pointer; font-family: sans-serif; font-weight: bold;">انتقال
+                                    مالکیت به شخص دیگر</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۸. پشتیبانی -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۸. پشتیبانی و ارتباطات (Support & CRM)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu" style="width: 200px;">
+                        <div class="wf-menu-item active">📚 پایگاه دانش و FAQ</div>
+                        <div class="wf-menu-item">🎫 ثبت تیکت پشتیبانی جدید</div>
+                        <div class="wf-menu-item">📨 تیکت‌های باز / تاریخچه <span class="wf-menu-badge">۱</span></div>
+                        <div class="wf-menu-item" style="background: #e2e8f0;">💬 شروع گفتگوی زنده</div>
+                    </div>
+                    <div class="wf-content-area" style="position: relative;">
+                        <div style="font-weight: bold; margin-bottom: 10px; font-size: 10pt;">❓ سوالات متداول کاربران
+                            (پایگاه دانش)</div>
+                        <div class="wf-grid-3">
+                            <div class="wf-block">🛠️ نحوه تنظیم دقیق کوک ساعت مکانیکی</div>
+                            <div class="wf-block">📜 شرایط فعال‌سازی گارانتی کالا</div>
+                            <div class="wf-block">💳 قوانین خرید اقساطی بدون ضامن</div>
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 10px; left: 10px; width: 220px; background: #ffffff; border: 2px solid var(--primary-color); border-radius: 6px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                            <div
+                                style="background: var(--primary-color); color: white; padding: 6px; font-size: 8.5pt; font-weight: bold; display: flex; justify-content: space-between;">
+                                <span>💬 پشتیبانی آنلاین واتچنا</span>
+                                <span>🟢 آنلاین</span>
+                            </div>
+                            <div
+                                style="height: 70px; background: #f8fafc; padding: 5px; font-size: 8pt; color: #64748b;">
+                                کارشناس: سلام! چطور می‌تونم در خرید ساعت بهتون کمک کنم؟</div>
+                            <div style="border-top: 1px solid #cbd5e1; padding: 4px; font-size: 8pt; color: #94a3b8;">
+                                متن پیام خود را بنویسید...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۹. سیستم ارسال -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۹. سیستم ارسال (Logistics & Delivery)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar" style="background: #334155;">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #475569; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 10pt; color: #fff;">🚚 مدیریت لجستیک (ادمین)</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item active">📦 روش‌های ارسال و تعرفه‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🧮 تنظیمات ماشین حساب هزینه</div>
+                        <div class="wf-menu-item admin-menu-item">📡 اتصال API شرکت‌های پستی</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="font-weight: bold; margin-bottom: 15px; font-size: 10pt;">تنظیمات و وضعیت روش‌های
+                            ارسال فعال در پلتفرم</div>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 9pt; text-align: center;">
+                            <tr style="background: #cbd5e1;">
+                                <th style="padding: 8px;">روش ارسال</th>
+                                <th>پوشش جغرافیایی</th>
+                                <th>نحوه محاسبه هزینه</th>
+                                <th>وضعیت وب‌سرویس رهگیری</th>
+                                <th>عملیات</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 8px;">پست پیشتاز</td>
+                                <td>سراسر کشور</td>
+                                <td>داینامیک (API پست)</td>
+                                <td style="color: green;">✔️ متصل (آنلاین)</td>
+                                <td>⚙️ تنظیمات</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 8px;">تیپاکس</td>
+                                <td>مراکز استان‌ها</td>
+                                <td>ثابت / پس‌کرایه</td>
+                                <td style="color: green;">✔️ متصل (آنلاین)</td>
+                                <td>⚙️ تنظیمات</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #fff5f5;">
+                                <td style="padding: 8px;">پیک موتوری ویژه</td>
+                                <td>فقط تهران</td>
+                                <td>بر اساس مسافت (اسنپ باکس)</td>
+                                <td style="color: orange; font-weight: bold;">⚠️ نیازمند توکن جدید</td>
+                                <td>⚙️ تنظیمات</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۱۰. یکپارچگی ترب و اسنپ -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۱۰. یکپارچگی ترب و اسنپ (Integrations)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar" style="background: #334155;">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #475569; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 10pt; color: #fff;">🔗 اتصالات خارجی (API)</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item active">🛒 فید ترب و ایمالز</div>
+                        <div class="wf-menu-item admin-menu-item">🛍️ همگام‌سازی اسنپ‌شاپ</div>
+                        <div class="wf-menu-item admin-menu-item">💳 تنظیمات اسنپ‌پی (BNPL)</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="font-weight: bold; margin-bottom: 15px; font-size: 10pt;">پیکربندی فید محصولات برای
+                            موتورهای جستجوی کالا</div>
+                        <div class="wf-block" style="text-align: right; margin-bottom: 15px; background: white;">
+                            <div
+                                style="display: flex; justify-content: space-between; margin-bottom: 10px; align-items: center;">
+                                <span><b>فید XML ترب:</b> فعال 🟢</span>
+                                <button
+                                    style="background: #cbd5e1; border: none; padding: 4px 8px; border-radius: 4px; font-size: 8pt; cursor: pointer; font-weight: bold;">کپی
+                                    لینک فید</button>
+                            </div>
+                            <div
+                                style="background: #f8fafc; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 8.5pt; color: #334155; border: 1px solid #e2e8f0; margin-bottom: 10px;">
+                                https://watchena.com/api/feeds/torob?token=XYZ1234567890
+                            </div>
+                            <span style="font-size: 8.5pt; color: #64748b;">* آخرین آپدیت خودکار فید: ۵ دقیقه پیش
+                                (همگام‌سازی موجودی و قیمت)</span>
+                        </div>
+                        <div class="wf-grid-3">
+                            <div class="wf-block" style="border-color: #22c55e; background: #f0fdf4;">
+                                🟢 <b>اسنپ‌پی (اقساط ۴ ماهه)</b><br>وضعیت: فعال متصل<br>محدودیت سقف: ۵۰ میلیون
+                            </div>
+                            <div class="wf-block" style="border-color: #3b82f6; background: #eff6ff;">
+                                🟢 <b>فروش در اسنپ‌شاپ</b><br>وضعیت: متصل به انبار<br>سفارشات امروز: ۱۲ عدد
+                            </div>
+                            <div class="wf-block" style="border-color: #ef4444; background: #fef2f2;">
+                                🔴 <b>ایمالز</b><br>وضعیت: غیرفعال<br>نیازمند تایید مدیر سایت
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۱۱. حسابداری و امور مالی -->
+        <div class="wireframe-section">
+            <div class="wireframe-title">۱۱. سیستم حسابداری و امور مالی (Accounting & Finance)</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar" style="background: #1e293b;">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 10pt; color: #10b981;">🏢 دپارتمان مالی و حسابداری
+                            </div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item active">📒 دفتر کل و اسناد حسابداری</div>
+                        <div class="wf-menu-item admin-menu-item">🤝 تسویه‌حساب ذی‌نفعان</div>
+                        <div class="wf-menu-item admin-menu-item">🏛️ سامانه مودیان و مالیات (VAT)</div>
+                        <div class="wf-menu-item admin-menu-item">📈 ترازنامه و سود و زیان (P&L)</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 15px; font-size: 10pt;">
+                            <span>📒 اسناد حسابداری ثبت شده (مهرماه)</span>
+                            <button
+                                style="background: #10b981; color: white; border: none; padding: 4px 10px; border-radius: 4px; font-size: 8.5pt; cursor: pointer;">+
+                                ثبت سند دستی</button>
+                        </div>
+                        <div class="wf-grid-3">
+                            <div class="wf-block" style="border-color: #10b981; background: #f0fdf4;">
+                                💵 <b>جریان وجوه نقد (Cash Flow)</b><br>+ ۱۲۰,۰۰۰,۰۰۰ تومان
+                            </div>
+                            <div class="wf-block" style="border-color: #f59e0b; background: #fffbeb;">
+                                ⏳ <b>بدهی به غرفه‌داران</b><br>۴۵,۰۰۰,۰۰۰ تومان
+                            </div>
+                            <div class="wf-block" style="border-color: #ef4444; background: #fef2f2;">
+                                🏛️ <b>مالیات بر ارزش افزوده پرداختی</b><br>۹,۵۰۰,۰۰۰ تومان
+                            </div>
+                        </div>
+                        <table
+                            style="width: 100%; border-collapse: collapse; font-size: 9pt; text-align: center; margin-top: 10px;">
+                            <tr style="background: #cbd5e1;">
+                                <th style="padding: 8px;">شماره سند</th>
+                                <th>تاریخ</th>
+                                <th>شرح سند</th>
+                                <th>بدهکار (تومان)</th>
+                                <th>بستانکار (تومان)</th>
+                                <th>وضعیت</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 8px;">ACC-1024</td>
+                                <td>۱۴۰۵/۰۷/۱۲</td>
+                                <td>فروش فاکتور ORD-4021</td>
+                                <td>۱۲,۴۰۰,۰۰۰</td>
+                                <td>۰</td>
+                                <td style="color: green;">تراز ✔️</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 8px;">ACC-1025</td>
+                                <td>۱۴۰۵/۰۷/۱۲</td>
+                                <td>کسر کارمزد پلتفرم (فاکتور ORD-4021)</td>
+                                <td>۰</td>
+                                <td>۱,۲۴۰,۰۰۰</td>
+                                <td style="color: green;">تراز ✔️</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #fff5f5;">
+                                <td style="padding: 8px;">ACC-1026</td>
+                                <td>۱۴۰۵/۰۷/۱۳</td>
+                                <td>تسویه حساب فروشگاه دیپلمات</td>
+                                <td>۳۲,۰۰۰,۰۰۰</td>
+                                <td>۰</td>
+                                <td style="color: orange;">در انتظار تایید مدیر مالی</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ۱۲.۱ پنل مدیریت -->
+        <div class="wireframe-section" id="admin-p1">
+            <div class="wireframe-title">۱۲.۱ پنل مدیریت کل سیستم - داشبورد و گزارشات کلان مالی</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                            <div style="font-size: 7.5pt; color: #94a3b8; margin-top: 4px;">سیستم مدیریت یکپارچه
+                                Watchena ERP</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item active">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها <span
+                                class="wf-menu-badge">۵</span></div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area" style="background: #f8fafc;">
+                        <div style="font-weight: bold; margin-bottom: 15px; font-size: 11pt; color: #0f172a;">🎛️ میز
+                            کار مدیریت سیستم (Control Panel View)</div>
+                        <div class="wf-grid-4">
+                            <div class="wf-block" style="background: #fff;">📈 فروش امروز<br><b>۲۴,۵۰۰,۰۰۰ تومان</b>
+                            </div>
+                            <div class="wf-block" style="background: #fff; border-color: red; color: red;">🚨 کالا رو به
+                                اتمام<br><b>۴ مدل ساعت</b></div>
+                            <div class="wf-block" style="background: #fff;">⏳ مدارک اقساطی<br><b>۷ کاربر منتظر تایید</b>
+                            </div>
+                            <div class="wf-block" style="background: #fff;">🏪 تایید کالا فروشگاه<br><b>۳ درخواست
+                                    جدید</b></div>
+                        </div>
+                        <div class="wf-block"
+                            style="height: 120px; display: flex; align-items: center; justify-content: center; background: white;">
+                            📊 نمودار و چارت خطی مقایسه‌ای فروش شعب پلتفرم و برترین کدهای تخفیف استفاده شده</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p2">
+            <div class="wireframe-title">۱۲.۲ پنل مدیریت کل سیستم - مدیریت محصولات، ویژگی‌ها و برندها</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item active">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها <span
+                                class="wf-menu-badge">۵</span></div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                            <div class="wf-search-mock" style="width: 300px;">🔍 جستجو بر اساس برند، ویژگی یا نوع
+                                موتور...</div>
+                            <button
+                                style="background: #f59e0b; border: none; padding: 6px 12px; font-weight: bold; border-radius: 4px; cursor: pointer;">+
+                                افزودن محصول/ویژگی جدید</button>
+                        </div>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 9pt; text-align: center;">
+                            <tr style="background: #cbd5e1; font-weight: bold;">
+                                <th style="padding: 8px;">تصویر</th>
+                                <th>نام محصول</th>
+                                <th>برند</th>
+                                <th>دسته ویژگی فنی</th>
+                                <th>تنوع قیمت‌ها</th>
+                                <th>عملیات</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td>🖼️</td>
+                                <td>ساعت سیکو ۵ اتوماتیک</td>
+                                <td>Seiko</td>
+                                <td>مکانیکی / بند استیل</td>
+                                <td>۳ نرخ فروشنده</td>
+                                <td>📝 ویرایش | ❌ حذف</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td>🖼️</td>
+                                <td>رولکس سابمارین لوکس</td>
+                                <td>Rolex</td>
+                                <td>اتوماتیک / ضدآب</td>
+                                <td>۱ نرخ کاتالوگ</td>
+                                <td>📝 ویرایش | ❌ حذف</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p3">
+            <div class="wireframe-title">۱۲.۳ پنل مدیریت کل سیستم - مدیریت سفارشات و مرجوعی‌ها</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item active">📦 ۳. مدیریت سفارشات و مرجوعی‌ها <span
+                                class="wf-menu-badge" style="background:#f59e0b; color:black;">۵</span></div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="display: flex; gap: 10px; margin-bottom: 15px; font-weight: bold; font-size: 9pt;">
+                            <span style="border-bottom: 2px solid #f59e0b; padding-bottom: 3px;">📥 سفارشات جدید
+                                (۳)</span>
+                            <span style="color:#718096">⚙️ در حال پردازش (۲)</span>
+                            <span style="color:#718096">🚚 تحویل پست شده</span>
+                            <span style="color:red;">🔄 درخواست‌های مرجوعی RMA (۱)</span>
+                        </div>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 9pt; text-align: center;">
+                            <tr style="background: #cbd5e1;">
+                                <th style="padding: 6px;">شماره سفارش</th>
+                                <th>مشتری</th>
+                                <th>تاریخ</th>
+                                <th>مبلغ کل</th>
+                                <th>نوع پرداخت</th>
+                                <th>وضعیت</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #cbd5e1;">
+                                <td>#ORD-4021</td>
+                                <td>علیرضا رضایی</td>
+                                <td>۱۴۰۵/۰۴/۰۵</td>
+                                <td>۱۲,۴۰۰,۰۰۰</td>
+                                <td>💳 آنلاین</td>
+                                <td><span style="color: orange;">⏳ معلق ادمین</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #cbd5e1;">
+                                <td>#RMA-109</td>
+                                <td>مینا کریمی</td>
+                                <td>۱۴۰۵/۰۴/۰۴</td>
+                                <td>۷,۵۰۰,۰۰۰</td>
+                                <td>🗓️ اقساطی</td>
+                                <td><span style="color: red;">🛠️ بررسی مرجوعی</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p4">
+            <div class="wireframe-title">۱۲.۴ پنل مدیریت کل سیستم - مدیریت انبار و کنترل موجودی</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item active">🏭 ۴. مدیریت انبار و کنترل موجودی <span
+                                class="wf-menu-badge" style="background:#ef4444; color:white;">هشدار</span></div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="background: #fef2f2; border: 1px solid #fecaca; padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 9pt; color: #991b1b;">
+                            ⚠️ <b>اعلان انبارداری:</b> موجودی انبار مرکزی برای ۲ مدل ساعت مچی کلاسیک به کمتر از آستانه
+                            مجاز (۳ عدد) رسیده است.
+                        </div>
+                        <div class="wf-grid-3">
+                            <div class="wf-block">🏢 <b>موجودی انبار مرکزی</b><br>۱,۴۲۰ عدد کالا</div>
+                            <div class="wf-block">🏬 <b>کالای نزد فروشندگان</b><br>۸۴0 عدد کالا</div>
+                            <div class="wf-block">🔄 <b>در حال تامین / ترانزیت</b><br>۱۵۰ عدد کالا</div>
+                        </div>
+                        <table
+                            style="width: 100%; border-collapse: collapse; font-size: 9pt; text-align: center; margin-top: 10px;">
+                            <tr style="background: #cbd5e1;">
+                                <th>کد کالا</th>
+                                <th>نام کالا</th>
+                                <th>انبار اصلی</th>
+                                <th>رزرو سبد خرید</th>
+                                <th>حداقل مجاز</th>
+                                <th>وضعیت</th>
+                            </tr>
+                            <tr>
+                                <td>W-102</td>
+                                <td>ساعت هوشمند امیزفیت</td>
+                                <td>۴۵ عدد</td>
+                                <td>۸ عدد</td>
+                                <td>۱۰ عدد</td>
+                                <td style="color: green;">کافی</td>
+                            </tr>
+                            <tr style="background: #fff5f5;">
+                                <td>W-504</td>
+                                <td>کاسیو نوستالژی طلایی</td>
+                                <td>۱ عدد</td>
+                                <td>۰ عدد</td>
+                                <td>۵ عدد</td>
+                                <td style="color: red; font-weight: bold;">🚨 بحرانی</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p5">
+            <div class="wireframe-title">۱۲.۵ پنل مدیریت کل سیستم - امور مالی، تراکنش‌ها و بازگشت وجه</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item active">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ،کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 9.5pt; margin-bottom: 15px; font-weight: bold;">
+                            <span>💰 گردش مالی کل: ۴۵۰,۰۰۰,۰۰۰ تومان</span>
+                            <span style="color: blue; cursor: pointer;">📥 خروجی اکسل تسویه حساب‌ها</span>
+                        </div>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 9pt; text-align: center;">
+                            <tr style="background: #cbd5e1;">
+                                <th>کد رهگیری</th>
+                                <th>کاربر / فروشگاه</th>
+                                <th>مبلغ</th>
+                                <th>درگاه بانکی</th>
+                                <th>نوع تراکنش</th>
+                                <th>وضعیت</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td>TRX-9921</td>
+                                <td>حسین حسینی</td>
+                                <td>۴,۲۰۰,۰۰۰</td>
+                                <td>زرین‌پال</td>
+                                <td>🛒 خرید کالا</td>
+                                <td style="color: green;">✔️ موفق</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #fffbeb;">
+                                <td>REF-8802</td>
+                                <td>گالری ساعت تیک‌تاک</td>
+                                <td>۳,۵۰۰,۰۰۰</td>
+                                <td>بانک ملت</td>
+                                <td>🔄 بازگشت وجه</td>
+                                <td style="color: orange;">⏳ در حال پایا</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p6">
+            <div class="wireframe-title">۱۲.۶ پنل مدیریت کل سیستم - مدیریت اقساط، اعتبارسنجی و مدارک</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item active">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک <span
+                                class="wf-menu-badge" style="background:#f59e0b; color:black;">۷</span></div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="font-weight: bold; margin-bottom: 12px; font-size: 10pt;">📂 پرونده‌های اقساطی منتظر
+                            احراز هویت و تایید مدارک</div>
+                        <div class="wf-block"
+                            style="text-align: right; margin-bottom: 15px; font-size: 9pt; line-height: 1.8; background: #fafafa; border: 1px solid #cbd5e1;">
+                            👤 <b>متقاضی:</b> رضا محمودی | 📞 <b>موبایل:</b> 09132221144 | ⌚ <b>کالای انتخابی:</b> ست
+                            کاسیو ادیفیس<br>
+                            📄 <b>مدارک ارسالی:</b> <span
+                                style="color: blue; cursor: pointer; text-decoration: underline;">تصویر کارت
+                                ملی.jpg</span> | <span
+                                style="color: blue; cursor: pointer; text-decoration: underline;">سند چک
+                                صیادی.pdf</span> | <span
+                                style="color: blue; cursor: pointer; text-decoration: underline;">فیش
+                                حقوقی.png</span><br>
+                            <div style="margin-top: 8px;">
+                                <button
+                                    style="background: green; color: white; border: none; padding: 4px 10px; border-radius: 4px; font-weight: bold; cursor: pointer;">✔️
+                                    تایید و افتتاح حساب اقساطی</button>
+                                <button
+                                    style="background: red; color: white; border: none; padding: 4px 10px; border-radius: 4px; font-weight: bold; cursor: pointer; margin-right: 5px;">❌
+                                    رد مدارک و پیام به کاربر</button>
+                            </div>
+                        </div>
+                        <div style="font-size: 9pt; color: #718096; border-top: 1px solid #eee; padding-top: 10px;">نمای
+                            لیست کل سوابق اقساط (معوق / تسویه شده / فعال) در این بخش لود می‌شود.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p7">
+            <div class="wireframe-title">۱۲.۷ پنل مدیریت کل سیستم - مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item active">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="font-weight: bold; margin-bottom: 12px; font-size: 10pt;">🛠️ ساخت کمپین تبلیغاتی و
+                            کد تخفیف جدید</div>
+                        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                            <div class="wf-input-mock" style="margin:0;">🏷️ کد تخفیف: WATCH2026</div>
+                            <div class="wf-input-mock" style="margin:0;">٪ درصد تخفیف: ۲۰٪</div>
+                            <div class="wf-input-mock" style="margin:0;">🔢 حداکثر سقف: ۱,۰۰۰,۰۰۰ تومان</div>
+                        </div>
+                        <div class="wf-btn-mock" style="background: #f59e0b; color: #1a1a1a; width: 180px;">📢 انتشار
+                            اعلان و کمپین</div>
+                        <div class="wf-block"
+                            style="margin-top: 15px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                            📊 جدول نمایش کمپین‌های فعال بنری صفحه اول و کدهای عمومی و اختصاصی پلتفرم</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p8">
+            <div class="wireframe-title">۱۲.۸ پنل مدیریت کل سیستم - مدیریت کاربران و مشتریان کل پلتفرم</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item active">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div class="wf-search-mock" style="width: 100%; margin-bottom: 15px;">🔍 جستجوی پیشرفته بر اساس
+                            نام، کدملی، شماره تلفن یا سطح دسترسی کاربر...</div>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 9pt; text-align: center;">
+                            <tr style="background: #cbd5e1;">
+                                <th>نام و نام خانوادگی</th>
+                                <th>شماره همراه</th>
+                                <th>نقش سیستم</th>
+                                <th>وضعیت اقساط</th>
+                                <th>آخرین ورود</th>
+                                <th>عملیات امنیتی</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td>مهسا علوی</td>
+                                <td>09131112233</td>
+                                <td>👤 مشتری عادی</td>
+                                <td>فاقد بدهی</td>
+                                <td>۱۰ دقیقه قبل</td>
+                                <td>⚙️ تغییر نقش | ❌ مسدودسازی</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #fff5f5;">
+                                <td>محمد کرمی</td>
+                                <td>09129998877</td>
+                                <td>🏪 ادمین شعبه بومی</td>
+                                <td><span style="color: red;">⚠️ ۱ قسط معوق</span></td>
+                                <td>۲ روز قبل</td>
+                                <td>⚙️ تغییر نقش | ❌ مسدودسازی</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p9">
+            <div class="wireframe-title">۱۲.۹ پنل مدیریت کل سیستم - مدیریت فروشندگان، شعب و کارمزد</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item active">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد <span
+                                class="wf-menu-badge" style="background:#f59e0b; color:black;">۳</span></div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div
+                            style="font-weight: bold; margin-bottom: 15px; font-size: 10pt; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                            🏪 درخواست‌های عقد قرارداد و تاسیس غرفه/شعبه جدید</div>
+                        <div class="wf-block"
+                            style="text-align: right; margin-bottom: 12px; font-size: 9pt; background: #fffbeb;">
+                            🏪 <b>نام فروشگاه:</b> لوکس واچ اصفهان | 🧑‍💼 <b>مدیر مسئول:</b> احمدی | 📊 <b>رسته:</b>
+                            ساعت‌های سوئیسی های‌کپی<br>
+                            ⚙️ <b>تنظیم نرخ کارمزد پایه پلتفرم برای این شعبه:</b> [ اسلایدر درصد کارمزد: ۶٪ پلتفرم | ۹۴٪
+                            غرفه‌دار ]<br>
+                            <div style="margin-top: 6px;">
+                                <span
+                                    style="background: green; color: white; padding: 2px 8px; border-radius: 4px; font-size: 8pt; cursor: pointer;">✔️
+                                    صدور لایسنس و تایید غرفه</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p10">
+            <div class="wireframe-title">۱۲.۱۰ پنل مدیریت کل سیستم - مدیریت محتوا (CMS) و سئو</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item active">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 9pt; font-weight: bold;">
+                            <span style="border-bottom: 2px solid #f59e0b;">✍️ وبلاگ و اخبار</span>
+                            <span style="color:#718096">⚙️ صفحات ثابت (درباره ما / قوانین)</span>
+                            <span style="color:#718096">🔍 متاتگ‌ها و سایت‌مپ SEO</span>
+                        </div>
+                        <div class="wf-input-mock">📝 عنوان مقاله جدید: راهنمای ست کردن ساعت مچی با کت و شلوار</div>
+                        <div class="wf-block"
+                            style="height: 100px; background: white; border: 1px solid #cbd5e1; color: #cbd5e1; font-size: 10pt;">
+                            [ 📝 شبیه‌ساز ویرایشگر متن پیشرفته WYSIWYG برای درج محتوا و آپلود تصاویر ]
+                        </div>
+                        <div class="wf-input-mock" style="margin-top: 10px;">🔑 کلمات کلیدی سئو: خرید ساعت, ساعت
+                            اتوماتیک, ست کردن ساعت لوکس</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p11">
+            <div class="wireframe-title">۱۲.۱۱ پنل مدیریت کل سیستم - تایید/رد نظرات و امتیازات محصولات</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item active">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="font-weight: bold; margin-bottom: 12px; font-size: 10pt;">💬 دیدگاه‌های جدید کاربران
+                            جهت بررسی و مدریت مانیتورینگ</div>
+                        <div class="wf-block"
+                            style="text-align: right; margin-bottom: 10px; background: white; border: 1px solid #cbd5e1; font-size: 9pt;">
+                            ⭐ <b>امتیاز: ۵/۵</b> | 🧑 <b>کاربر:</b> علی هاشمی | ⌚ <b>برای کالا:</b> رولکس دیت‌جاست
+                            های‌کپی<br>
+                            💬 "کیفیت ساخت بدنه واقعاً عالیه و اصلاً با نمونه اصلی مو نمی‌زنه، بندش هم خیلی راحته. ممنون
+                            از ارسالتون."<br><br>
+                            <button
+                                style="background: green; color: white; border: none; padding: 2px 8px; border-radius: 4px; cursor: pointer; font-weight: bold;">✔️
+                                تایید و نمایش در سایت</button>
+                            <button
+                                style="background: red; color: white; border: none; padding: 2px 8px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 5px;">❌
+                                حذف نظر</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wireframe-section" id="admin-p12">
+            <div class="wireframe-title">۱۲.۱۲ پنل مدیریت کل سیستم - تنظیمات کلان، نقش‌ها و Gatewayها</div>
+            <div class="wireframe-box">
+                <div class="wf-main-layout">
+                    <div class="wf-sidebar-menu admin-sidebar">
+                        <div
+                            style="text-align: center; padding: 10px 0; border-bottom: 1px solid #334155; margin-bottom: 8px;">
+                            <div style="font-weight: bold; font-size: 11pt; color: #f59e0b;">👑 سوپر ادمین سیستم</div>
+                        </div>
+                        <div class="wf-menu-item admin-menu-item">📊 ۱. داشبورد و گزارشات کلان مالی</div>
+                        <div class="wf-menu-item admin-menu-item">⌚ ۲. مدیریت محصولات، ویژگی‌ها و برندها</div>
+                        <div class="wf-menu-item admin-menu-item">📦 ۳. مدیریت سفارشات و مرجوعی‌ها</div>
+                        <div class="wf-menu-item admin-menu-item">🏭 ۴. مدیریت انبار و کنترل موجودی</div>
+                        <div class="wf-menu-item admin-menu-item">💳 ۵. امور مالی، تراکنش‌ها و بازگشت وجه</div>
+                        <div class="wf-menu-item admin-menu-item">🗓️ ۶. مدیریت اقساط، اعتبارسنجی و مدارک</div>
+                        <div class="wf-menu-item admin-menu-item">🎯 ۷. مارکتینگ، کمپین‌ها و کدهای تخفیف</div>
+                        <div class="wf-menu-item admin-menu-item">👥 ۸. مدیریت کاربران و مشتریان کل پلتفرم</div>
+                        <div class="wf-menu-item admin-menu-item">🏪 ۹. مدیریت فروشندگان، شعب و کارمزد</div>
+                        <div class="wf-menu-item admin-menu-item">📝 ۱۰. مدیریت محتوا (CMS) و سئو</div>
+                        <div class="wf-menu-item admin-menu-item">💬 ۱۱. تایید/رد نظرات و امتیازات محصولات</div>
+                        <div class="wf-menu-item admin-menu-item active">🛠️ ۱۲. تنظیمات کلان، نقش‌ها و Gatewayها</div>
+                    </div>
+                    <div class="wf-content-area">
+                        <div style="font-weight: bold; margin-bottom: 15px; font-size: 10pt;">⚙️ پیکربندی متغیرهای
+                            سیستمی و درگاه‌های پرداخت</div>
+
+                        <div style="margin-bottom: 12px;">
+                            <label style="font-size: 9pt; font-weight: bold; display: block; margin-bottom: 4px;">💳
+                                انتخاب درگاه بانکی فعال:</label>
+                            <input type="checkbox" checked> درگاه بانک ملت (به پرداخت) &nbsp;&nbsp;
+                            <input type="checkbox" checked> درگاه زرین‌پال &nbsp;&nbsp;
+                            <input type="checkbox"> درگاه پی‌پینگ
+                        </div>
+
+                        <div style="margin-bottom: 12px;">
+                            <label style="font-size: 9pt; font-weight: bold; display: block; margin-bottom: 4px;">💬
+                                تنظیمات پنل پیامکی (SMS Gateway):</label>
+                            <div class="wf-input-mock" style="margin:0;">🔑 API Key: Kavenegar_XYZ1234567890KeyMock
+                            </div>
+                        </div>
+
+                        <div>
+                            <label style="font-size: 9pt; font-weight: bold; display: block; margin-bottom: 4px;">🛡️
+                                ماتریس نقش‌ها و سطوح دسترسی (RBAC):</label>
+                            <div class="wf-block" style="text-align: right; font-size: 8.5pt; background: #fafafa;">
+                                [ ادمین مالی: دسترسی به تراکنش‌ها دارد 🟢 | دسترسی به تنظیمات سرور ندارد 🔴 ]<br>
+                                [ پشتیبان تیکت: دسترسی به چت و تیکت دارد 🟢 | دسترسی به حساب‌های مالی ندارد 🔴 ]
+                            </div>
+                        </div>
+
+                        <div class="wf-btn-mock" style="margin-top: 15px; width: 150px; background: green;">ذخیره کل
+                            تنظیمات</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>پلتفرم Watchena - طرح کلی مستندات نیازمندی‌های سیستم و وایرفریم‌های یکپارچه ERP (هماهنگ با PRD)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
